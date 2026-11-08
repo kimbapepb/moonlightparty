@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cashier Area - Elite Protection Bureau</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/investigation.js"></script>
+</head>
+<body>
+  <header><a href="index.html" class="brand"><span>Elite Protection Bureau</span></a></header>
+  <main class="investigation" data-room-page="cashier-area">
+    <a class="back" href="evidence-board.html">‹ Evidence Board</a>
+    <section class="access" id="access" aria-labelledby="access-title">
+  <div class="access-kicker"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M10 11V7a4 4 0 118 0v4 M6 11h16v14H6z M14 16v4"/></svg> MOONLIGHT LOUNGE</div>
+  <h1 id="access-title">Cashier Area</h1>
+  <p>Enter the eight-digit code you obtained from the Inspectors.</p>
+  <form id="access-form" class="keypad" data-code="22051982">
+    <label for="code">ENTER CODE</label>
+    <input id="code" type="password" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" autocomplete="off" placeholder="••••••••" required>
+    <div class="key-grid"><button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button><button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button><button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button><button type="button" id="erase" aria-label="Delete last digit">⌫</button><button type="button" data-digit="0">0</button><button type="submit" aria-label="Unlock location">↵</button></div>
+    <p id="access-status" role="status"></p>
+  </form>
+</section>
+    <div class="board" id="room" hidden>
+      <div class="board-heading"><div><div class="case-label">MOONLIGHT LOUNGE - LOCATION 03</div><h1 tabindex="-1" id="room-title">Cashier Area</h1><p>14 November 2026</p></div></div>
+      <section aria-labelledby="objects"><h2 id="objects">Objects in the Room</h2><p class="board-instruction">Select an object to inspect. Take a screenshot if you find something unusual.</p>
+      <div class="pin-grid"><a class="pin-card" href="#struk-batal">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M5 2h12l6 6v18H5z M17 2v6h6 M9 13h10m-10 5h10"/></svg></span><strong>Baki Struk Batal</strong>
+    </a><a class="pin-card" href="#map-reservasi">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 8h10l3 3h11v13H2z M2 8V5h9l3 3h10v3"/></svg></span><strong>Map</strong>
+    </a><a class="pin-card" href="#terminal">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h24v16H2z M8 25h12m-6-5v5"/></svg></span><strong>Terminal Kasir</strong>
+    </a><a class="pin-card" href="#serah-terima">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M5 2h12l6 6v18H5z M17 2v6h6 M9 13h10m-10 5h10"/></svg></span><strong>Buku Serah Terima Shift</strong>
+    </a></div></section>
+      <section class="notes" aria-labelledby="notes-title"><h2 id="notes-title">Investigation Notes <small id="note-count"></small></h2><div id="notes-list"></div></section>
+    </div>
+    <dialog id="record" class="record-dialog" aria-labelledby="record-title">
+  <div class="record-top"><span id="record-label">INSPECTION</span><form method="dialog"><button aria-label="Close inspection">×</button></form></div>
+  <div id="record-body"></div>
+  <div class="record-bottom"><small>Click a passage to highlight it. Click it again to remove the highlight.</small><div id="note-status" role="status"></div></div>
+</dialog>
+    <template id="struk-batal">
+  
+  <h2>Baki Struk Batal</h2>
+  <div class="record-content"><p>Di samping printer, ada baki bertuliskan “BATAL ATAU CETAK ULANG”. Struk paling atas dicoret dengan pena biru. Nomor dan jumlahnya masih bisa dibaca.</p><p>P-016 (14 November - 22.24)<br>2 soda lemon, ₩16.000<br>Nomor meja salah. Masukkan ulang ke Meja 6.</p></div>
+</template><template id="map-reservasi">
+  
+  <h2>Map</h2>
+  <div class="record-content"><p>Bertuliskan “Reservasi Akhir Pekan”. Map berisi salinan ringkas pesanan tambahan untuk tiga acara. Lembar ini dipakai kasir untuk mengecek ke mana tagihan makanan dan perlengkapan harus dimasukkan.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Pesanan tambahan"><table><thead><tr><th scope="col">Referensi</th><th scope="col">Tanggal</th><th scope="col">Pesanan Tambahan</th><th scope="col">Catatan</th></tr></thead><tbody><tr><td>EVT-1112</td><td>12 November</td><td>1 piring buah</td><td>Tagihkan ke bilik VIP 2</td></tr><tr><td>EVT-1114</td><td>14 November</td><td>2 nampan makanan ringan, 1 teko air mineral</td><td>Sajikan setelah tamu datang</td></tr><tr><td>EVT-1115</td><td>15 November</td><td>2 mikrofon</td><td>Siapkan sebelum acara</td></tr></tbody></table></div></div>
+</template><template id="terminal">
+  
+  <h2>Terminal Kasir</h2>
+  <div class="record-content"><p>Terminal menampilkan ringkasan penjualan Sabtu, 14 November 2026.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Ringkasan penjualan"><table><thead><tr><th scope="col">Nomor Transaksi</th><th scope="col">Ringkasan</th><th scope="col">Total</th><th scope="col">Status</th></tr></thead><tbody><tr><td><a class="filelink" href="#transaksi-p-011">P-011</a></td><td>4 air mineral, 2 kentang goreng</td><td>₩38.000</td><td>Lunas</td></tr><tr><td><a class="filelink" href="#transaksi-p-012">P-012</a></td><td>Tambahan makanan ke VIP 2</td><td>₩54.000</td><td>Lunas</td></tr><tr><td><a class="filelink" href="#transaksi-p-013">P-013</a></td><td>3 soda, 1 kentang goreng</td><td>₩32.000</td><td>Lunas</td></tr><tr><td><a class="filelink" href="#transaksi-p-014">P-014</a></td><td>Pesanan acara (2 unit)</td><td>₩360.000</td><td>Lunas</td></tr><tr><td><a class="filelink" href="#transaksi-p-015">P-015</a></td><td>2 soda, 1 nachos</td><td>₩29.000</td><td>Lunas</td></tr><tr><td><a class="filelink" href="#transaksi-p-016">P-016</a></td><td>2 soda lemon</td><td>₩16.000</td><td>Dibatalkan</td></tr><tr><td><a class="filelink" href="#transaksi-p-017">P-017</a></td><td>2 soda lemon (meja 6)</td><td>₩16.000</td><td>Lunas</td></tr></tbody></table></div></div>
+</template><template id="serah-terima">
+  
+  <h2>Buku Serah Terima Shift</h2>
+  <div class="record-content"><p>Buku terbuka pada halaman tanggal 14 November. Di bagian atas ada bekas tinta dari cap kasir. Tiga catatan ditulis dengan pulpen hitam.</p><ul class="record-lines"><li>18.00 - Uang kembalian awal ₩200.000. Sudah dihitung bersama staf sif sebelumnya.</li><li>20.37 - Ganti gulungan kertas printer. Gulungan cadangan tinggal satu.</li><li>22.25 - Pesanan soda lemon salah nomor meja. Sudah dimasukkan ulang ke Meja 6.</li></ul></div>
+</template>
+    <template id="transaksi-p-011">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-011</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-011</dd></div><div><dt>Ringkasan</dt><dd>4 air mineral, 2 kentang goreng</dd></div><div><dt>Total</dt><dd>₩38.000</dd></div><div><dt>Status</dt><dd>Lunas</dd></div></dl></div>
+</template><template id="transaksi-p-012">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-012</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-012</dd></div><div><dt>Ringkasan</dt><dd>Tambahan makanan ke VIP 2</dd></div><div><dt>Total</dt><dd>₩54.000</dd></div><div><dt>Status</dt><dd>Lunas</dd></div></dl></div>
+</template><template id="transaksi-p-013">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-013</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-013</dd></div><div><dt>Ringkasan</dt><dd>3 soda, 1 kentang goreng</dd></div><div><dt>Total</dt><dd>₩32.000</dd></div><div><dt>Status</dt><dd>Lunas</dd></div></dl></div>
+</template><template id="transaksi-p-014">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-014</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-014</dd></div><div><dt>Tanggal Pembayaran</dt><dd>14 November 2026</dd></div><div><dt>Referensi</dt><dd>EVT-1114</dd></div><div><dt>Kode Barang</dt><dd>ML-27</dd></div><div><dt>Jumlah</dt><dd>2 dus</dd></div><div><dt>Harga Satuan</dt><dd>₩180.000</dd></div><div><dt>Total</dt><dd>₩360.000</dd></div><div><dt>Status</dt><dd>Lunas. Paid by Kang Seung-hyun</dd></div><div><dt>Keterangan</dt><dd>Ambil 22.40, pintu samping</dd></div><div><dt>ID Pemesan</dt><dd><a class="filelink" href="#profil-pemesan">CUS-2417</a></dd></div></dl></div>
+</template><template id="transaksi-p-015">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-015</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-015</dd></div><div><dt>Ringkasan</dt><dd>2 soda, 1 nachos</dd></div><div><dt>Total</dt><dd>₩29.000</dd></div><div><dt>Status</dt><dd>Lunas</dd></div></dl></div>
+</template><template id="transaksi-p-016">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-016</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-016</dd></div><div><dt>Ringkasan</dt><dd>2 soda lemon</dd></div><div><dt>Total</dt><dd>₩16.000</dd></div><div><dt>Status</dt><dd>Dibatalkan</dd></div></dl></div>
+</template><template id="transaksi-p-017">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>P-017</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Transaksi</dt><dd>P-017</dd></div><div><dt>Ringkasan</dt><dd>2 soda lemon (meja 6)</dd></div><div><dt>Total</dt><dd>₩16.000</dd></div><div><dt>Status</dt><dd>Lunas</dd></div></dl></div>
+</template><template id="profil-pemesan">
+  <a class="detail-parent" href="#terminal">‹ Back to record</a>
+  <h2>Profil Pemesan</h2>
+  <div class="record-content"><dl class="fields"><div><dt>ID Pemesan</dt><dd>CUS-2417</dd></div><div><dt>Nama Pemesan</dt><dd>Kang Min-jae</dd></div><div><dt>Tanggal Lahir</dt><dd>21 November 2008</dd></div><div><dt>Referensi Reservasi</dt><dd><a class="filelink" href="#transaksi-p-014">EVT-1114 - P-014</a></dd></div></dl></div>
+</template>
+  </main>
+</body>
+</html>

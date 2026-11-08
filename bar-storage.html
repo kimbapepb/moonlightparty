@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bar’s Storage - Elite Protection Bureau</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/investigation.js"></script>
+</head>
+<body>
+  <header><a href="index.html" class="brand"><span>Elite Protection Bureau</span></a></header>
+  <main class="investigation" data-room-page="bar-storage">
+    <a class="back" href="evidence-board.html">‹ Evidence Board</a>
+    <section class="access" id="access" aria-labelledby="access-title">
+  <div class="access-kicker"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M10 11V7a4 4 0 118 0v4 M6 11h16v14H6z M14 16v4"/></svg> MOONLIGHT LOUNGE</div>
+  <h1 id="access-title">Bar’s Storage</h1>
+  <p>Enter the eight-digit code you obtained from the Inspectors.</p>
+  <form id="access-form" class="keypad" data-code="15051397">
+    <label for="code">ENTER CODE</label>
+    <input id="code" type="password" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" autocomplete="off" placeholder="••••••••" required>
+    <div class="key-grid"><button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button><button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button><button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button><button type="button" id="erase" aria-label="Delete last digit">⌫</button><button type="button" data-digit="0">0</button><button type="submit" aria-label="Unlock location">↵</button></div>
+    <p id="access-status" role="status"></p>
+  </form>
+</section>
+    <div class="board" id="room" hidden>
+      <div class="board-heading"><div><div class="case-label">MOONLIGHT LOUNGE - LOCATION 02</div><h1 tabindex="-1" id="room-title">Bar’s Storage</h1><p>14 November 2026</p></div></div>
+      <section aria-labelledby="objects"><h2 id="objects">Objects in the Room</h2><p class="board-instruction">Select an object to inspect. Take a screenshot if you find something unusual.</p>
+      <div class="pin-grid"><a class="pin-card" href="#stok">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M5 2h12l6 6v18H5z M17 2v6h6 M9 13h10m-10 5h10"/></svg></span><strong>Papan Jepit Stok Bar</strong>
+    </a><a class="pin-card" href="#rak-depan">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l11-5 11 5v13l-11 5-11-5z M3 8l11 5 11-5 M14 13v13"/></svg></span><strong>Rak Depan</strong>
+    </a><a class="pin-card" href="#troli">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h4l4 14h14l2-10H7 M10 23a2 2 0 104 0 2 2 0 10-4 0 M20 23a2 2 0 104 0 2 2 0 10-4 0"/></svg></span><strong>Troli</strong>
+    </a><a class="pin-card" href="#rak-belakang">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l11-5 11 5v13l-11 5-11-5z M3 8l11 5 11-5 M14 13v13"/></svg></span><strong>Rak Belakang</strong>
+    </a><a class="pin-card" href="#map-pengiriman">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 8h10l3 3h11v13H2z M2 8V5h9l3 3h10v3"/></svg></span><strong>Map</strong>
+    </a></div></section>
+      <section class="notes" aria-labelledby="notes-title"><h2 id="notes-title">Investigation Notes <small id="note-count"></small></h2><div id="notes-list"></div></section>
+    </div>
+    <dialog id="record" class="record-dialog" aria-labelledby="record-title">
+  <div class="record-top"><span id="record-label">INSPECTION</span><form method="dialog"><button aria-label="Close inspection">×</button></form></div>
+  <div id="record-body"></div>
+  <div class="record-bottom"><small>Click a passage to highlight it. Click it again to remove the highlight.</small><div id="note-status" role="status"></div></div>
+</dialog>
+    <template id="stok">
+  
+  <h2>Papan Jepit Stok Bar</h2>
+  <div class="record-content"><p>Papan jepit tergantung di sisi meja. Lembar teratas mencatat barang yang dipindahkan ke bar sebelum lounge buka pada 14 November.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Perpindahan stok bar"><table><thead><tr><th scope="col">Pukul</th><th scope="col">Barang</th><th scope="col">Jumlah</th><th scope="col">Tujuan</th></tr></thead><tbody><tr><td>17.10</td><td>Air mineral</td><td>2 dus</td><td>Lemari pendingin bar</td></tr><tr><td>17.25</td><td>Soda lemon</td><td>1 dus</td><td>Bar utama</td></tr><tr><td>18.05</td><td>Gelas pendek</td><td>1 rak</td><td>Bilik VIP</td></tr></tbody></table></div></div>
+</template><template id="rak-depan">
+  
+  <h2>Rak Depan</h2>
+  <div class="record-content"><p>Terdapat dua botol berwarna gelap. Satu dus terbuka berada setinggi pinggang. Di dalamnya ada enam botol kaca gelap berlabel Cold Brew Concentrate, masing-masing 500 mL. Pada sisi dus tercetak kode CB-09. Selembar label tempel bertuliskan, “Untuk menu kopi malam. Simpan di kulkas setelah dibuka.”</p></div>
+</template><template id="troli">
+  
+  <h2>Troli</h2>
+  <div class="record-content"><p>Troli lipat disandarkan di dekat pintu dengan satu tali pengikat melingkar di pegangannya. Pada rangka troli ada selotip bertuliskan “Roda kiri bunyi kalau muatan berat.” Di alasnya ada potongan kardus pipih bertuliskan Gelas Pendek (DN-6117).</p></div>
+</template><template id="rak-belakang">
+  
+  <h2>Rak Belakang</h2>
+  <div class="record-content"><p>Di rak paling bawah ada empat dus berlabel Sparkling Water. Tiga masih tertutup. Tutup dus keempat sudah dilipat ke dalam, dan keenam botolnya masih tersegel. Botol-botol itu berwarna gelap.</p><div class="inspection"><section><h3><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l11-5 11 5v13l-11 5-11-5z M3 8l11 5 11-5 M14 13v13"/></svg> Inspeksi Dus</h3><dl class="fields"><div><dt>Label</dt><dd>Sparkling Water</dd></div><div><dt>Jenis Minuman</dt><dd>Air berkarbonasi tanpa alkohol</dd></div><div><dt>Isi per Dus</dt><dd>6 botol × 700 mL</dd></div><div><dt>Nomor Lot</dt><dd>ML-27</dd></div><div><dt>Nomor Surat Jalan</dt><dd>DN-6118</dd></div><div><dt>Penerima</dt><dd>Moonlight Lounge</dd></div><div><dt>Penyimpanan</dt><dd>Simpan di tempat sejuk dan kering</dd></div></dl></section><section><h3><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M11 2h6v7l4 5v11H7V14l4-5z M7 16h14"/></svg> Inspeksi Botol</h3><dl class="fields"><div><dt>Label</dt><dd>Blended Whisky</dd></div><div><dt>Volume</dt><dd>700 mL</dd></div><div><dt>Kadar Alkohol</dt><dd>40% ABV</dd></div><div><dt>Status</dt><dd>Masih tersegel.</dd></div></dl></section></div></div>
+</template><template id="map-pengiriman">
+  
+  <h2>Map</h2>
+  <div class="record-content"><p>Map terletak di atas meja dengan tulisan “Pengiriman 12-14 November”.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Surat jalan"><table><thead><tr><th scope="col">Nomor Surat</th><th scope="col">Tanggal Diterima</th><th scope="col">Barang</th><th scope="col">Jumlah</th></tr></thead><tbody><tr><td><a class="filelink" href="#surat-dn-6116">DN-6116</a></td><td>12 November</td><td>Sirup lemon</td><td>20 dus</td></tr><tr><td><a class="filelink" href="#surat-dn-6117">DN-6117</a></td><td>13 November</td><td>Gelas pendek</td><td>15 dus</td></tr><tr><td><a class="filelink" href="#surat-dn-6118">DN-6118</a></td><td>13 November</td><td>Air soda</td><td>24 dus</td></tr><tr><td><a class="filelink" href="#surat-dn-6119">DN-6119</a></td><td>14 November</td><td>Air mineral</td><td>10 dus</td></tr></tbody></table></div></div>
+</template>
+    <template id="surat-dn-6116">
+  <a class="detail-parent" href="#map-pengiriman">‹ Back to record</a>
+  <h2>DN-6116</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Surat</dt><dd>DN-6116</dd></div><div><dt>Tanggal Diterima</dt><dd>12 November</dd></div><div><dt>Barang</dt><dd>Sirup lemon</dd></div><div><dt>Jumlah</dt><dd>20 dus</dd></div></dl></div>
+</template><template id="surat-dn-6117">
+  <a class="detail-parent" href="#map-pengiriman">‹ Back to record</a>
+  <h2>DN-6117</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Surat</dt><dd>DN-6117</dd></div><div><dt>Tanggal Diterima</dt><dd>13 November</dd></div><div><dt>Barang</dt><dd>Gelas pendek</dd></div><div><dt>Jumlah</dt><dd>15 dus</dd></div></dl></div>
+</template><template id="surat-dn-6118">
+  <a class="detail-parent" href="#map-pengiriman">‹ Back to record</a>
+  <h2>DN-6118</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Deklarasi</dt><dd>IMP-261103-084</dd></div><div><dt>Barang yang Dideklarasikan</dt><dd>Air soda tanpa alkohol</dd></div><div><dt>Jumlah</dt><dd>24 dus, masing-masing 6 × 700 mL</dd></div><div><dt>Nomor Lot</dt><dd>ML-27</dd></div><div><dt>Tujuan Pengiriman</dt><dd>Moonlight Lounge, Suyu-dong, Gangbuk</dd></div><div><dt>Cap Pengiriman</dt><dd>13 November 2026, pukul 16.25</dd></div></dl></div>
+</template><template id="surat-dn-6119">
+  <a class="detail-parent" href="#map-pengiriman">‹ Back to record</a>
+  <h2>DN-6119</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Surat</dt><dd>DN-6119</dd></div><div><dt>Tanggal Diterima</dt><dd>14 November</dd></div><div><dt>Barang</dt><dd>Air mineral</dd></div><div><dt>Jumlah</dt><dd>10 dus</dd></div></dl></div>
+</template>
+  </main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager’s Room - Elite Protection Bureau</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/investigation.js"></script>
+</head>
+<body>
+  <header><a href="index.html" class="brand"><span>Elite Protection Bureau</span></a></header>
+  <main class="investigation" data-room-page="manager-room">
+    <a class="back" href="evidence-board.html">‹ Evidence Board</a>
+    <section class="access" id="access" aria-labelledby="access-title">
+  <div class="access-kicker"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M10 11V7a4 4 0 118 0v4 M6 11h16v14H6z M14 16v4"/></svg> MOONLIGHT LOUNGE</div>
+  <h1 id="access-title">Manager’s Room</h1>
+  <p>Enter the eight-digit code you obtained from the Inspectors.</p>
+  <form id="access-form" class="keypad" data-code="15081945">
+    <label for="code">ENTER CODE</label>
+    <input id="code" type="password" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" autocomplete="off" placeholder="••••••••" required>
+    <div class="key-grid"><button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button><button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button><button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button><button type="button" id="erase" aria-label="Delete last digit">⌫</button><button type="button" data-digit="0">0</button><button type="submit" aria-label="Unlock location">↵</button></div>
+    <p id="access-status" role="status"></p>
+  </form>
+</section>
+    <div class="board" id="room" hidden>
+      <div class="board-heading"><div><div class="case-label">MOONLIGHT LOUNGE - LOCATION 01</div><h1 tabindex="-1" id="room-title">Manager’s Room</h1><p>14 November 2026</p></div></div>
+      <section aria-labelledby="objects"><h2 id="objects">Objects in the Room</h2><p class="board-instruction">Select an object to inspect. Take a screenshot if you find something unusual.</p>
+      <div class="pin-grid"><a class="pin-card" href="#buku-meja">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M5 2h12l6 6v18H5z M17 2v6h6 M9 13h10m-10 5h10"/></svg></span><strong>Buku Catatan Meja</strong>
+    </a><a class="pin-card" href="#map-pembayaran">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 8h10l3 3h11v13H2z M2 8V5h9l3 3h10v3"/></svg></span><strong>Map</strong>
+    </a><a class="pin-card" href="#amplop">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 6h24v17H2z M2 6l12 10 12-10"/></svg></span><strong>Amplop Cokelat</strong>
+    </a><a class="pin-card" href="#laci">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 8h10l3 3h11v13H2z M2 8V5h9l3 3h10v3"/></svg></span><strong>Laci Meja</strong>
+    </a><a class="pin-card" href="#tablet">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h24v16H2z M8 25h12m-6-5v5"/></svg></span><strong>Tablet Operasional</strong>
+    </a></div></section>
+      <section class="notes" aria-labelledby="notes-title"><h2 id="notes-title">Investigation Notes <small id="note-count"></small></h2><div id="notes-list"></div></section>
+    </div>
+    <dialog id="record" class="record-dialog" aria-labelledby="record-title">
+  <div class="record-top"><span id="record-label">INSPECTION</span><form method="dialog"><button aria-label="Close inspection">×</button></form></div>
+  <div id="record-body"></div>
+  <div class="record-bottom"><small>Click a passage to highlight it. Click it again to remove the highlight.</small><div id="note-status" role="status"></div></div>
+</dialog>
+    <template id="buku-meja">
+  
+  <h2>Buku Catatan Meja</h2>
+  <div class="record-content"><p>Buku terbuka pada halaman bertanggal 14 November 2026. Beberapa tugas sudah dicentang dan ada coretan di sebelah pengingat untuk mengecek lampu lorong.</p><h3>Persiapan buka:</h3><ul class="record-lines"><li>☑  Tes mikrofon di lounge utama.</li><li>☑  Isi ulang tisu di bilik VIP.</li><li>☑  Siapkan gelas cadangan di bawah meja bar.</li><li>☐  Cek lampu lorong dekat toilet.</li><li>☐  Pindahkan payung tamu yang tertinggal ke meja depan.</li></ul><p>Coretan di samping daftar: “Lampu cadangan ada di kotak perkakas.”</p></div>
+</template><template id="map-pembayaran">
+  
+  <h2>Map</h2>
+  <div class="record-content"><p>Map abu-abu di rak arsip yang diberi label PEMBAYARAN (NOVEMBER). Isinya kuitansi dengan cap LUNAS.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Kuitansi November"><table><thead><tr><th scope="col">Tanggal</th><th scope="col">Pekerjaan</th><th scope="col">Jumlah</th></tr></thead><tbody><tr><td>5 November 2026</td><td>Cetak daftar menu dan kartu meja</td><td>₩36.000</td></tr><tr><td>8 November 2026</td><td>Servis mesin es dan penggantian filter</td><td>₩180.000</td></tr><tr><td>10 November 2026</td><td>Penggantian dua lampu di atas meja bar</td><td>₩42.000</td></tr></tbody></table></div><p>Terdapat laporan teknisi: Mesin diuji pukul 15.10 KST. Es dari siklus pertama dibuang setelah penggantian filter. Pekerjaan diterima staf bar.</p></div>
+</template><template id="amplop">
+  
+  <h2>Amplop Cokelat</h2>
+  <div class="record-content"><p>Amplop terselip di bawah buku spiral. Di bagian depan tertulis EVT-1028 dan Arsip kasir. Di dalamnya ada formulir pembatalan, salinan bukti transfer, dan catatan singkat dari kasir.</p><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1028</dd></div><div><dt>Nama Pemesan</dt><dd>Choi Eun-seo</dd></div><div><dt>Tanggal Acara</dt><dd>12 November 2026</dd></div><div><dt>Area</dt><dd>Bilik VIP 1</dd></div><div><dt>Alasan Pembatalan</dt><dd>Pemesan meminta pembatalan setelah jadwal rombongan berubah</dd></div><div><dt>Uang Muka Dikembalikan</dt><dd>₩100.000</dd></div><div><dt>Tanggal Pengembalian</dt><dd>29 Oktober 2026</dd></div></dl></div>
+</template><template id="laci">
+  
+  <h2>Laci Meja</h2>
+  <div class="record-content"><p>Laci atas berisi pulpen, klip kertas, beberapa formulir kosong, dan enam reservasi yang sudah dikonfirmasi. Formulir-formulir itu dijepit berdasarkan tanggal acara.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Daftar reservasi"><table><thead><tr><th scope="col">Nomor Reservasi</th><th scope="col">Tanggal</th><th scope="col">Pemesan</th><th scope="col">Jenis Acara</th><th scope="col">Area</th><th scope="col">Waktu</th></tr></thead><tbody><tr><td><a class="filelink" href="#reservasi-evt-1108">EVT-1108</a></td><td>8 November</td><td>Park Soo-bin</td><td>Pesta privat</td><td>Bilik VIP 1 dan 2</td><td>19.00–22.00</td></tr><tr><td><a class="filelink" href="#reservasi-evt-1110">EVT-1110</a></td><td>10 November</td><td>Lee Do-hyun</td><td>Pesta privat</td><td>Lounge utama</td><td>20.00–23.00</td></tr><tr><td><a class="filelink" href="#reservasi-evt-1112">EVT-1112</a></td><td>12 November</td><td>Han Yu-ri</td><td>Jamuan komunitas</td><td>Bilik VIP 2</td><td>19.00–21.30</td></tr><tr><td><a class="filelink" href="#reservasi-evt-1114">EVT-1114</a></td><td>14 November</td><td>Kang Min-jae</td><td>Pesta privat</td><td>Bilik VIP 2</td><td>21.00–00.00</td></tr><tr><td><a class="filelink" href="#reservasi-evt-1115">EVT-1115</a></td><td>15 November</td><td>Seo Ji-won</td><td>Jamuan komunitas</td><td>Lounge utama</td><td>18.30–21.00</td></tr><tr><td><a class="filelink" href="#reservasi-evt-1116">EVT-1116</a></td><td>16 November</td><td>Jung Hae-in</td><td>Pesta privat</td><td>Lounge utama</td><td>20.30–23.30</td></tr></tbody></table></div><h3>Catatan di bagian bawah beberapa formulir</h3><ul class="record-lines"><li>EVT-1108: “Kue dititipkan di kulkas bar. Keluarkan setelah pemesan memberi aba-aba.”</li><li>EVT-1110: “Siapkan satu mikrofon. Daftar putar dibawa pemesan.”</li><li>EVT-1114: “Daftar tamu sudah diserahkan ke resepsionis. Tamu mulai datang pukul 20.45. Siapkan dua mikrofon. Lampu bilik VIP diredupkan, kecuali yang dekat panggung.”</li><li>EVT-1115: “Daftar tamu menyusul. Siapkan dua mikrofon dan sisakan satu meja dekat pintu untuk penerima tamu.”</li><li>EVT-1116: “Geser meja tengah setelah pukul 19.00. Pemesan akan datang lebih awal untuk cek tata ruang.”</li></ul></div>
+</template><template id="tablet">
+  
+  <h2>Tablet Operasional</h2>
+  <div class="record-content"><div class="chat-inbox"><div class="chat-inbox-title">Messages</div><a class="chat-preview" href="#sif-bar"><span class="chat-avatar" aria-hidden="true">S</span><span><strong>Shift Bar</strong><small>Baik, Kak. Satu rak sudah saya sisihkan untuk VIP.</small></span><span aria-hidden="true">›</span></a><a class="chat-preview" href="#perlengkapan"><span class="chat-avatar" aria-hidden="true">P</span><span><strong>Perlengkapan</strong><small>Baik, Kak. Sudah saya taruh di laci bawah.</small></span><span aria-hidden="true">›</span></a><a class="chat-preview" href="#percakapan"><span class="chat-avatar" aria-hidden="true">K</span><span><strong>Kang Min-jae</strong><small>Sip, makasih.</small></span><span aria-hidden="true">›</span></a></div></div>
+</template>
+    <template id="reservasi-evt-1108">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1108</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1108</dd></div><div><dt>Tanggal</dt><dd>8 November</dd></div><div><dt>Pemesan</dt><dd>Park Soo-bin</dd></div><div><dt>Jenis Acara</dt><dd>Pesta privat</dd></div><div><dt>Area</dt><dd>Bilik VIP 1 dan 2</dd></div><div><dt>Waktu</dt><dd>19.00–22.00</dd></div></dl></div>
+</template><template id="reservasi-evt-1110">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1110</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1110</dd></div><div><dt>Tanggal</dt><dd>10 November</dd></div><div><dt>Pemesan</dt><dd>Lee Do-hyun</dd></div><div><dt>Jenis Acara</dt><dd>Pesta privat</dd></div><div><dt>Area</dt><dd>Lounge utama</dd></div><div><dt>Waktu</dt><dd>20.00–23.00</dd></div></dl></div>
+</template><template id="reservasi-evt-1112">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1112</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1112</dd></div><div><dt>Tanggal</dt><dd>12 November</dd></div><div><dt>Pemesan</dt><dd>Han Yu-ri</dd></div><div><dt>Jenis Acara</dt><dd>Jamuan komunitas</dd></div><div><dt>Area</dt><dd>Bilik VIP 2</dd></div><div><dt>Waktu</dt><dd>19.00–21.30</dd></div></dl></div>
+</template><template id="reservasi-evt-1114">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1114</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1114</dd></div><div><dt>Tanggal</dt><dd>14 November</dd></div><div><dt>Pemesan</dt><dd>Kang Min-jae</dd></div><div><dt>Jenis Acara</dt><dd>Pesta privat</dd></div><div><dt>Area</dt><dd>Bilik VIP 2</dd></div><div><dt>Waktu</dt><dd>21.00–00.00</dd></div></dl></div>
+</template><template id="reservasi-evt-1115">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1115</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1115</dd></div><div><dt>Tanggal</dt><dd>15 November</dd></div><div><dt>Pemesan</dt><dd>Seo Ji-won</dd></div><div><dt>Jenis Acara</dt><dd>Jamuan komunitas</dd></div><div><dt>Area</dt><dd>Lounge utama</dd></div><div><dt>Waktu</dt><dd>18.30–21.00</dd></div></dl></div>
+</template><template id="reservasi-evt-1116">
+  <a class="detail-parent" href="#laci">‹ Back to record</a>
+  <h2>EVT-1116</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Nomor Reservasi</dt><dd>EVT-1116</dd></div><div><dt>Tanggal</dt><dd>16 November</dd></div><div><dt>Pemesan</dt><dd>Jung Hae-in</dd></div><div><dt>Jenis Acara</dt><dd>Pesta privat</dd></div><div><dt>Area</dt><dd>Lounge utama</dd></div><div><dt>Waktu</dt><dd>20.30–23.30</dd></div></dl></div>
+</template><template id="sif-bar">
+  <a class="detail-parent" href="#tablet">‹ Back to record</a>
+  <h2>Shift Bar</h2>
+  <div class="record-content"><ul class="chat-record"><li class="incoming"><strong>Shift Bar</strong><span>Kak, gelas pendek yang bersih tinggal satu rak. Sisanya masih dicuci.</span></li><li class="outgoing"><strong>Manager</strong><span>Pakai yang di rak dulu untuk VIP, ya. Kabari saya kalau sisanya sudah kering.</span></li><li class="incoming"><strong>Shift Bar</strong><span>Baik, Kak. Satu rak sudah saya sisihkan untuk VIP.</span></li></ul></div>
+</template><template id="perlengkapan">
+  <a class="detail-parent" href="#tablet">‹ Back to record</a>
+  <h2>Perlengkapan</h2>
+  <div class="record-content"><ul class="chat-record"><li class="incoming"><strong>Perlengkapan</strong><span>Kak, kabel mic cadangannya sudah ketemu. Tadi terselip di tas mixer.</span></li><li class="outgoing"><strong>Manager</strong><span>Tolong taruh di laci bawah mixer, ya. Nanti saya ambil saat cek sound.</span></li><li class="incoming"><strong>Perlengkapan</strong><span>Baik, Kak. Sudah saya taruh di laci bawah.</span></li></ul></div>
+</template><template id="percakapan">
+  <a class="detail-parent" href="#tablet">‹ Back to record</a>
+  <h2>Kang Min-jae</h2>
+  <div class="record-content"><p class="record-meta">13 November 2026</p><ul class="chat-record"><li class="outgoing"><strong>Manager</strong><span>Daftar tamu yang terakhir sudah masuk. Yang datang duluan langsung boleh masuk VIP?</span></li><li class="incoming"><strong>Min-jae</strong><span>Boleh, mulai 20.45. Gue nyusul habis cek sound.</span></li><li class="outgoing"><strong>Manager</strong><span>Lampunya mau seperti kemarin?</span></li><li class="incoming"><strong>Min-jae</strong><span>Iya, tapi yang dekat panggung agak terangin.</span></li><li class="outgoing"><strong>Manager</strong><span>Barang buat besok sudah masuk. Sampelnya kutaruh di rak belakang.</span></li><li class="incoming"><strong>Min-jae</strong><span>Udah gue coba sampelnya. Yang di surat jalan masih tertulis soda, kan? Buat besok tetap 180.000 per dus.</span></li><li class="outgoing"><strong>Manager</strong><span>Yang ambil barang besok lewat mana?</span></li><li class="incoming"><strong>Min-jae</strong><span>Pintu samping aja. Yang dua dus udah gue bilang datang jam 22.40.</span></li><li class="outgoing"><strong>Manager</strong><span>Oke. Bilik VIP sudah bisa dipakai dari jam delapan.</span></li><li class="incoming"><strong>Min-jae</strong><span>Sip, makasih.</span></li></ul></div>
+</template>
+  </main>
+</body>
+</html>

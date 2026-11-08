@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Area - Elite Protection Bureau</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/investigation.js"></script>
+</head>
+<body>
+  <header><a href="index.html" class="brand"><span>Elite Protection Bureau</span></a></header>
+  <main class="investigation" data-room-page="security-area">
+    <a class="back" href="evidence-board.html">‹ Evidence Board</a>
+    <section class="access" id="access" aria-labelledby="access-title">
+  <div class="access-kicker"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M10 11V7a4 4 0 118 0v4 M6 11h16v14H6z M14 16v4"/></svg> MOONLIGHT LOUNGE</div>
+  <h1 id="access-title">Security Area</h1>
+  <p>Enter the eight-digit code you obtained from the Inspectors.</p>
+  <form id="access-form" class="keypad" data-code="09101926">
+    <label for="code">ENTER CODE</label>
+    <input id="code" type="password" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" autocomplete="off" placeholder="••••••••" required>
+    <div class="key-grid"><button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button><button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button><button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button><button type="button" id="erase" aria-label="Delete last digit">⌫</button><button type="button" data-digit="0">0</button><button type="submit" aria-label="Unlock location">↵</button></div>
+    <p id="access-status" role="status"></p>
+  </form>
+</section>
+    <div class="board" id="room" hidden>
+      <div class="board-heading"><div><div class="case-label">MOONLIGHT LOUNGE - LOCATION 04</div><h1 tabindex="-1" id="room-title">Security Area</h1><p>14 November 2026</p></div></div>
+      <section aria-labelledby="objects"><h2 id="objects">Objects in the Room</h2><p class="board-instruction">Select an object to inspect. Take a screenshot if you find something unusual.</p>
+      <div class="pin-grid"><a class="pin-card" href="#denah">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 6l8-3 8 3 8-3v19l-8 3-8-3-8 3z M10 3v19m8-16v19"/></svg></span><strong>Denah Kamera</strong>
+    </a><a class="pin-card" href="#kartu-akses">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M10 11V7a4 4 0 118 0v4 M6 11h16v14H6z M14 16v4"/></svg></span><strong>Baki Kartu Akses</strong>
+    </a><a class="pin-card" href="#monitor">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h24v16H2z M8 25h12m-6-5v5"/></svg></span><strong>Monitor CCTV</strong>
+    </a><a class="pin-card" href="#laporan-shift">
+      <span class="pin-icon"><svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"><path d="M5 2h12l6 6v18H5z M17 2v6h6 M9 13h10m-10 5h10"/></svg></span><strong>Buku Laporan Shift</strong>
+    </a></div></section>
+      <section class="notes" aria-labelledby="notes-title"><h2 id="notes-title">Investigation Notes <small id="note-count"></small></h2><div id="notes-list"></div></section>
+    </div>
+    <dialog id="record" class="record-dialog" aria-labelledby="record-title">
+  <div class="record-top"><span id="record-label">INSPECTION</span><form method="dialog"><button aria-label="Close inspection">×</button></form></div>
+  <div id="record-body"></div>
+  <div class="record-bottom"><small>Click a passage to highlight it. Click it again to remove the highlight.</small><div id="note-status" role="status"></div></div>
+</dialog>
+    <template id="denah">
+  
+  <h2>Denah Kamera</h2>
+  <div class="record-content"><p>Denah dilaminasi dan ditempel di samping monitor. Di dekat titik CAM-04 ada dua tulisan dengan tinta berbeda.</p><p>Koridor servis<br>Catatan staf: “Di buku sif, tulis pintu samping. Pintu yang sama dipakai vendor dan petugas kebersihan.”</p><p>Denah memperlihatkan bahwa koridor itu menghubungkan gudang bar dengan pintu samping.</p><div class="corridor" aria-label="Gudang bar terhubung ke koridor servis dan pintu samping"><span>Gudang bar</span><b>→</b><span>Koridor servis - CAM-04</span><b>→</b><span>Pintu samping</span></div></div>
+</template><template id="kartu-akses">
+  
+  <h2>Baki Kartu Akses</h2>
+  <div class="record-content"><p>Di sudut meja ada dua kartu bertuliskan VENDOR dan selembar daftar peminjaman. Salah satu kartu dipakai kru audio pada pukul 20.15 untuk mengambil satu kotak kabel. Kartu dikembalikan ke petugas keamanan pukul 20.23. Di bawahnya ada stiker kecil bertuliskan “Akses koridor saja.”</p></div>
+</template><template id="monitor">
+  
+  <h2>Monitor CCTV</h2>
+  <div class="record-content"><div class="table-scroll" tabindex="0" role="region" aria-label="Daftar kamera"><table><thead><tr><th scope="col">Kamera</th><th scope="col">Lokasi</th><th scope="col">Tampilan</th></tr></thead><tbody><tr><td><a class="filelink" href="#kamera-cam-01">CAM-01</a></td><td>Pintu masuk utama</td><td>Resepsionis memeriksa daftar tamu. Seorang tamu kembali untuk mengambil jaket.</td></tr><tr><td><a class="filelink" href="#kamera-cam-02">CAM-02</a></td><td>Lounge utama</td><td>Staf membawa nampan makanan melewati meja dekat panggung.</td></tr><tr><td><a class="filelink" href="#kamera-cam-03">CAM-03</a></td><td>Koridor VIP</td><td>Dua tamu keluar dari bilik VIP dan berjalan ke arah toilet.</td></tr><tr><td><a class="filelink" href="#kamera-cam-04">CAM-04</a></td><td>Koridor samping</td><td>Seorang staf membawa dua dus ke dekat pintu.</td></tr></tbody></table></div></div>
+</template><template id="laporan-shift">
+  
+  <h2>Buku Laporan Shift</h2>
+  <div class="record-content"><p>Buku terbuka pada halaman 14 November 2026. Ada beberapa catatan dengan paraf petugas.</p><ul class="record-lines"><li>20.43 - Daftar tamu untuk lounge utama dan bilik VIP sudah diterima meja depan.</li><li>21.17 - Jaket hitam tertinggal di kursi dekat resepsionis. Simpan di rak barang temuan.</li><li>22.38 - Petugas kebersihan keluar lewat pintu samping untuk membuang sampah.</li><li>22.44 - Jaket hitam sudah diambil pemiliknya.</li><li>23.15 - Vendor mengambil satu peti gelas sewaan lewat pintu samping.</li></ul></div>
+</template>
+    <template id="kamera-cam-01">
+  <a class="detail-parent" href="#monitor">‹ Back to record</a>
+  <h2>CAM-01</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Kamera</dt><dd>CAM-01</dd></div><div><dt>Lokasi</dt><dd>Pintu masuk utama</dd></div><div><dt>Tampilan</dt><dd>Resepsionis memeriksa daftar tamu. Seorang tamu kembali untuk mengambil jaket.</dd></div></dl></div>
+</template><template id="kamera-cam-02">
+  <a class="detail-parent" href="#monitor">‹ Back to record</a>
+  <h2>CAM-02</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Kamera</dt><dd>CAM-02</dd></div><div><dt>Lokasi</dt><dd>Lounge utama</dd></div><div><dt>Tampilan</dt><dd>Staf membawa nampan makanan melewati meja dekat panggung.</dd></div></dl></div>
+</template><template id="kamera-cam-03">
+  <a class="detail-parent" href="#monitor">‹ Back to record</a>
+  <h2>CAM-03</h2>
+  <div class="record-content"><dl class="fields"><div><dt>Kamera</dt><dd>CAM-03</dd></div><div><dt>Lokasi</dt><dd>Koridor VIP</dd></div><div><dt>Tampilan</dt><dd>Dua tamu keluar dari bilik VIP dan berjalan ke arah toilet.</dd></div></dl></div>
+</template><template id="kamera-cam-04">
+  <a class="detail-parent" href="#monitor">‹ Back to record</a>
+  <h2>CAM-04</h2>
+  <div class="record-content"><p class="record-meta">14 November 2026 - Koridor samping</p><ul class="timeline"><li>22.36.48 - Seorang staf lewat sambil mendorong troli kosong ke arah gudang bar.</li><li>22.38.12 - Petugas kebersihan membawa dua kantong sampah keluar lewat pintu samping. Staf menahan pintu sampai petugas lewat.</li><li>22.39.27 - Staf kembali dari arah gudang sambil membawa dua dus karton. Ia meletakkannya di lantai dekat pintu.</li><li>22.40.06 - Seseorang datang dari luar dan menunjukkan layar ponselnya. Staf melihat layar, lalu mengambil kedua dus.</li><li>22.40.22 - Staf menyerahkan dus pertama, kemudian dus kedua. Saat dus kedua diputar, tulisan Sparkling Water terlihat di salah satu sisinya.</li><li>22.41.03 - Orang tersebut keluar membawa kedua dus. Staf menutup pintu dan kembali ke arah bar.</li></ul></div>
+</template>
+  </main>
+</body>
+</html>
